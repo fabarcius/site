@@ -1,1 +1,277 @@
-Em breve...
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Fabarcius Produtos Artesanais</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="description" content="Fabarcius - produtos artesanais, macramês e curadoria de peças feitas à mão." />
+
+  <style>
+    :root {
+      --bg: #f5efe9;
+      --card: #ffffff;
+      --text: #2f261f;
+      --accent: #c07749;
+      --accent-soft: #f3d1b5;
+      --border-soft: rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: radial-gradient(circle at top, #fbe9dd, var(--bg));
+      color: var(--text);
+    }
+
+    .page {
+      max-width: 480px;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.92);
+      border-radius: 32px;
+      padding: 2.5rem 2rem 2.2rem;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-soft);
+      backdrop-filter: blur(10px);
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 260px;
+      width: 70vw;
+      margin: 0 auto 1.5rem;
+      display: block;
+    }
+
+    .title {
+      font-size: 1.3rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #8a6548;
+      margin: 0 0 0.4rem;
+    }
+
+    .subtitle {
+      font-size: 0.98rem;
+      color: #6c5543;
+      margin: 0 0 1.8rem;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 1.6rem;
+    }
+
+    .btn-link {
+      display: block;
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.98rem;
+      border: 1px solid var(--border-soft);
+      background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.96),
+        rgba(255, 252, 247, 0.96)
+      );
+      color: var(--text);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+      transition:
+        transform 160ms ease,
+        box-shadow 160ms ease,
+        background 160ms ease,
+        border-color 160ms ease;
+    }
+
+    .btn-link:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+      background: linear-gradient(
+        135deg,
+        #fff7ef,
+        rgba(255, 255, 255, 0.98)
+      );
+      border-color: var(--accent-soft);
+    }
+
+    .btn-link--elo7 {
+      background: linear-gradient(135deg, #ffd6a9, #ffe7c8);
+      border-color: rgba(192, 119, 73, 0.4);
+    }
+
+    .btn-link--elo7:hover {
+      background: linear-gradient(135deg, #ffc585, #ffe7c8);
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid var(--border-soft);
+      color: #a27853;
+      margin-bottom: 0.7rem;
+    }
+
+    .badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #d1844a;
+    }
+
+    .footer-note {
+      font-size: 0.78rem;
+      color: #8b7664;
+    }
+
+    /* ====== EFEITO DE SUAVIZAÇÃO (FADE-IN) ====== */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(12px);
+      transition:
+        opacity 600ms ease-out,
+        transform 600ms ease-out;
+    }
+
+    .fade-in.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+      .page {
+        border-radius: 24px;
+        padding: 2rem 1.4rem 1.8rem;
+      }
+
+      .title {
+        font-size: 1.1rem;
+      }
+
+      .subtitle {
+        font-size: 0.92rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="badge fade-in" data-delay="0">
+      <span class="badge-dot"></span>
+      <span>Feito à mão em Palhoça · SC</span>
+    </div>
+
+    <!-- Troque o src abaixo pelo caminho da sua logo -->
+    <img
+      src="logo-fabarcius-landingpage.png"
+      alt="Fabarcius Produtos Artesanais"
+      class="logo fade-in"
+      data-delay="80"
+    />
+
+    <h1 class="title fade-in" data-delay="160">
+      Fabarcius
+    </h1>
+
+    <p class="subtitle fade-in" data-delay="220">
+      Artesanato autoral, macramês e curadoria de peças feitas à mão.
+    </p>
+
+    <div class="links">
+      <!-- Elo7 -->
+      <a
+        class="btn-link btn-link--elo7 fade-in"
+        data-delay="280"
+        href="https://www.elo7.com.br/fabarcius"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Ir para a loja no Elo7
+      </a>
+
+      <!-- Instagram -->
+      <a
+        class="btn-link fade-in"
+        data-delay="340"
+        href="https://www.instagram.com/fabarcius"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Instagram
+      </a>
+
+      <!-- TikTok -->
+      <a
+        class="btn-link fade-in"
+        data-delay="400"
+        href="https://www.tiktok.com/@fabarcius"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        TikTok
+      </a>
+    </div>
+
+    <p class="footer-note fade-in" data-delay="460">
+      Em breve: mais peças, coleções sazonais e novidades da Fabarcius.
+    </p>
+  </main>
+
+  <script>
+    (function () {
+      const elements = document.querySelectorAll(".fade-in");
+      const prefersReducedMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+
+      // Se o usuário prefere menos animação, mostramos tudo direto
+      if (prefersReducedMotion) {
+        elements.forEach((el) => el.classList.add("is-visible"));
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const delay = parseInt(el.dataset.delay || "0", 10);
+
+              setTimeout(() => {
+                el.classList.add("is-visible");
+              }, delay);
+
+              obs.unobserve(el);
+            }
+          });
+        },
+        {
+          threshold: 0.2,
+        }
+      );
+
+      elements.forEach((el) => observer.observe(el));
+    })();
+  </script>
+</body>
+</html>
